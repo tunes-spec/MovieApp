@@ -6,9 +6,25 @@
 //
 
 import UIKit
+
+struct Slide {
+    let title: String
+    let animationName: String
+    let buttonColor: UIColor
+    let buttonTitle: String
+    
+    static let collection: [Slide] = [
+        .init(title: "観た映画を記録しよう！", animationName: "", buttonColor: .systemGreen, buttonTitle: "Next"),
+        .init(title: "映画を探そう！", animationName: "", buttonColor: .systemYellow, buttonTitle: "Next")
+    ]
+}
+
+
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView:UICollectionView!
+    
+    private let slides: [Slide] = Slide.collection
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +59,24 @@ extension OnboardingViewController:UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
-        var color = UIColor.clear
-        cell.backgroundColor = color
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! OnboardingViewControllerCell
+        let slide = slides[indexPath.item]
+        cell.configure(with: slide)
+        cell.backgroundColor = UIColor.clear
         return cell
+    }
+}
+
+class OnboardingViewControllerCell: UICollectionViewCell {
+    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var actionButton: UIButton!
+    @IBAction func actionButtonTapped() {
+    }
+    func configure(with slide: Slide) {
+        titleLabel.text = slide.title
+        actionButton.backgroundColor = slide.buttonColor
+        actionButton.setTitle(slide.buttonTitle, for: .normal)
     }
 }
 

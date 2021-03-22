@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellid" id="OdL-JL-jyr">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellid" id="OdL-JL-jyr" customClass="OnboardingViewControllerCell" customModule="LottieSamlple2" customModuleProvider="target">
                                         <rect key="frame" x="5.5" y="0.0" width="403" height="829"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RT0-n3-V5S">
@@ -82,6 +82,9 @@
                                                                     <state key="normal" title="Get Started">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="actionButtonTapped" destination="OdL-JL-jyr" eventType="touchUpInside" id="GcB-7m-eFp"/>
+                                                                    </connections>
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiP-qQ-pt0">
                                                                     <rect key="frame" x="378" y="0.0" width="25" height="50"/>
@@ -102,6 +105,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="403" height="829"/>
+                                        <connections>
+                                            <outlet property="actionButton" destination="1X6-IQ-r9b" id="3ks-ow-GyY"/>
+                                            <outlet property="animationView" destination="8cD-xC-55p" id="8mb-ze-ewD"/>
+                                            <outlet property="titleLabel" destination="WJ2-ac-cWH" id="5cQ-gi-jJB"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -121,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.84057971014494" y="30.803571428571427"/>
+            <point key="canvasLocation" x="-145" y="59"/>
         </scene>
     </scenes>
     <resources>
