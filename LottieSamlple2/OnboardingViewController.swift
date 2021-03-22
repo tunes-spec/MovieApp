@@ -41,6 +41,30 @@ class OnboardingViewController: UIViewController {
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
     }
+    
+    private func handleAvtionButtonTap(at indexpath: IndexPath) {
+        if indexpath.item == slides.count - 1 {
+            showMainApp()
+        } else {
+            let nextIndex = indexpath.item + 1
+            let nextIndexPath = IndexPath(item: nextIndex , section: 0)
+            collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
+        }
+    }
+    
+    private func showMainApp() {
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MianApp")
+        if let windoewScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windoewScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = mainAppViewController
+            UIView.transition(with: window,
+                              duration: 0.25,
+                              options: .transitionCurlUp,
+                              animations: nil,
+                              completion: nil)
+        }
+    }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate {
@@ -66,7 +90,9 @@ extension OnboardingViewController:UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath) as! OnboardingViewControllerCell
         let slide = slides[indexPath.item]
         cell.configure(with: slide)
-        cell.backgroundColor = UIColor.clear
+        cell.actionButtonDidTap = { [weak self] in
+            self!.handleAvtionButtonTap(at: indexPath)
+        }
         return cell
     }
 }
@@ -75,12 +101,14 @@ class OnboardingViewControllerCell: UICollectionViewCell {
     @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
-    @IBAction func actionButtonTapped() {
-    }
+    
+    var actionButtonDidTap: (() -> Void)?
+    
     func configure(with slide: Slide) {
         titleLabel.text = slide.title
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)
+        
         let animation = Animation.named(slide.animationName)
         animationView.animation = animation
         animationView.loopMode = .loop
@@ -89,5 +117,10 @@ class OnboardingViewControllerCell: UICollectionViewCell {
             animationView.play(completion: nil)
         }
     }
+    
+    @IBAction func actionButtonTapped() {
+        actionButtonDidTap?()
+    }
+    
 }
 

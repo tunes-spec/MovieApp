@@ -12,7 +12,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="LottieSamlple2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="intro" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="LottieSamlple2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,7 +129,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="59"/>
+            <point key="canvasLocation" x="-761" y="-29"/>
+        </scene>
+        <!--Main App View Controller-->
+        <scene sceneID="lDn-9S-z2L">
+            <objects>
+                <viewController storyboardIdentifier="MianApp" id="nyt-IG-Wtb" customClass="MainAppViewController" customModule="LottieSamlple2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HVT-R4-apc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VoF-xr-B4D">
+                                <rect key="frame" x="87" y="163" width="240" height="570"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8B-oR-Wh1">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70F-Q6-KZ5">
+                                        <rect key="frame" x="0.0" y="60" width="240" height="480"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="70F-Q6-KZ5" secondAttribute="height" multiplier="1:2" id="gB3-Nx-ewH"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giz-tT-d4q">
+                                        <rect key="frame" x="0.0" y="540" width="240" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="buttonTapped" destination="nyt-IG-Wtb" eventType="touchUpInside" id="Bgj-yl-5Eg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v7f-Y4-45T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VoF-xr-B4D" firstAttribute="centerY" secondItem="HVT-R4-apc" secondAttribute="centerY" id="4uL-CB-Vo9"/>
+                            <constraint firstItem="VoF-xr-B4D" firstAttribute="centerX" secondItem="HVT-R4-apc" secondAttribute="centerX" id="pqo-mv-pYC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHt-Kg-lu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="-29.464285714285712"/>
         </scene>
     </scenes>
     <designables>
