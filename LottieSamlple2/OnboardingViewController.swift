@@ -49,11 +49,6 @@ extension OnboardingViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
         var color = UIColor.clear
-        if indexPath.item % 2 == 0 {
-            color = .red
-        } else {
-            color = .blue
-        }
         cell.backgroundColor = color
         return cell
     }
