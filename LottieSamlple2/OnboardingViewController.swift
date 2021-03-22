@@ -20,15 +20,11 @@ class OnboardingViewController: UIViewController {
         layout.scrollDirection = .vertical
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.delegate = self
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isPagingEnabled = true
     }
 }
 
-extension OnboardingViewController:UICollectionViewDelegate {
-    
-}
 
 extension OnboardingViewController:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
