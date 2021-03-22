@@ -37,9 +37,9 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8o2-xW-qTc">
                                                     <rect key="frame" x="0.0" y="124" width="403" height="581"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-xC-55p">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cD-xC-55p" customClass="AnimationView" customModule="Lottie">
                                                             <rect key="frame" x="0.0" y="0.0" width="403" height="403"/>
-                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="8cD-xC-55p" secondAttribute="height" multiplier="1:1" id="5Xi-2q-XyW"/>
                                                             </constraints>
@@ -107,7 +107,7 @@
                                         <size key="customSize" width="403" height="829"/>
                                         <connections>
                                             <outlet property="actionButton" destination="1X6-IQ-r9b" id="3ks-ow-GyY"/>
-                                            <outlet property="animationView" destination="8cD-xC-55p" id="8mb-ze-ewD"/>
+                                            <outlet property="animationView" destination="8cD-xC-55p" id="nrO-MU-h2G"/>
                                             <outlet property="titleLabel" destination="WJ2-ac-cWH" id="5cQ-gi-jJB"/>
                                         </connections>
                                     </collectionViewCell>
@@ -132,15 +132,15 @@
             <point key="canvasLocation" x="-145" y="59"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8cD-xC-55p"/>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

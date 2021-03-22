@@ -14,8 +14,8 @@
 		D301F7FD26064DDB0036DCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D301F7FB26064DDB0036DCCF /* Main.storyboard */; };
 		D301F7FF26064DDD0036DCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D301F7FE26064DDD0036DCCF /* Assets.xcassets */; };
 		D301F80226064DDD0036DCCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D301F80026064DDD0036DCCF /* LaunchScreen.storyboard */; };
-		D3A27C942607F8AE0065D4CE /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A27C922607F8AE0065D4CE /* movie.json */; };
 		D3A27C952607F8AE0065D4CE /* review.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A27C932607F8AE0065D4CE /* review.json */; };
+		D3A27C992608CB230065D4CE /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A27C982608CB230065D4CE /* movie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		D301F7FE26064DDD0036DCCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D301F80126064DDD0036DCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D301F80326064DDD0036DCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3A27C922607F8AE0065D4CE /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
 		D3A27C932607F8AE0065D4CE /* review.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = review.json; sourceTree = "<group>"; };
+		D3A27C982608CB230065D4CE /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 		D3A27C912607F8A00065D4CE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D3A27C922607F8AE0065D4CE /* movie.json */,
+				D3A27C982608CB230065D4CE /* movie.json */,
 				D3A27C932607F8AE0065D4CE /* review.json */,
 			);
 			path = Assets;
@@ -165,9 +165,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A27C952607F8AE0065D4CE /* review.json in Resources */,
+				D3A27C992608CB230065D4CE /* movie.json in Resources */,
 				D301F80226064DDD0036DCCF /* LaunchScreen.storyboard in Resources */,
 				D301F7FF26064DDD0036DCCF /* Assets.xcassets in Resources */,
-				D3A27C942607F8AE0065D4CE /* movie.json in Resources */,
 				D301F7FD26064DDB0036DCCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

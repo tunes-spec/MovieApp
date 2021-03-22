@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 struct Slide {
     let title: String
@@ -14,8 +15,8 @@ struct Slide {
     let buttonTitle: String
     
     static let collection: [Slide] = [
-        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "", buttonColor: .systemGreen, buttonTitle: "記録する"),
-        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "", buttonColor: .systemYellow, buttonTitle: "探す")
+        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "review", buttonColor: .systemGreen, buttonTitle: "記録する"),
+        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "movie", buttonColor: .systemYellow, buttonTitle: "探す")
     ]
 }
 
@@ -71,7 +72,7 @@ extension OnboardingViewController:UICollectionViewDataSource {
 }
 
 class OnboardingViewControllerCell: UICollectionViewCell {
-    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var animationView: AnimationView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var actionButton: UIButton!
     @IBAction func actionButtonTapped() {
@@ -80,7 +81,13 @@ class OnboardingViewControllerCell: UICollectionViewCell {
         titleLabel.text = slide.title
         actionButton.backgroundColor = slide.buttonColor
         actionButton.setTitle(slide.buttonTitle, for: .normal)
+        let animation = Animation.named(slide.animationName)
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        
+        if !animationView.isAnimationPlaying {
+            animationView.play(completion: nil)
+        }
     }
 }
-
 
