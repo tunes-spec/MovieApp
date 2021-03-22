@@ -84,25 +84,41 @@
 		D301F7F426064DDB0036DCCF /* LottieSamlple2 */ = {
 			isa = PBXGroup;
 			children = (
-				D3A27C912607F8A00065D4CE /* Assets */,
-				D301F7F526064DDB0036DCCF /* AppDelegate.swift */,
-				D301F7F726064DDB0036DCCF /* SceneDelegate.swift */,
+				D3A27C9E2608CCE40065D4CE /* View */,
+				D3A27C9D2608CCCB0065D4CE /* SupportingFile */,
 				D301F7F926064DDB0036DCCF /* OnboardingViewController.swift */,
-				D301F7FB26064DDB0036DCCF /* Main.storyboard */,
-				D301F7FE26064DDD0036DCCF /* Assets.xcassets */,
-				D301F80026064DDD0036DCCF /* LaunchScreen.storyboard */,
-				D301F80326064DDD0036DCCF /* Info.plist */,
 			);
 			path = LottieSamlple2;
 			sourceTree = "<group>";
 		};
-		D3A27C912607F8A00065D4CE /* Assets */ = {
+		D3A27C912607F8A00065D4CE /* JsonFile */ = {
 			isa = PBXGroup;
 			children = (
 				D3A27C982608CB230065D4CE /* movie.json */,
 				D3A27C932607F8AE0065D4CE /* review.json */,
 			);
-			path = Assets;
+			path = JsonFile;
+			sourceTree = "<group>";
+		};
+		D3A27C9D2608CCCB0065D4CE /* SupportingFile */ = {
+			isa = PBXGroup;
+			children = (
+				D301F80026064DDD0036DCCF /* LaunchScreen.storyboard */,
+				D301F80326064DDD0036DCCF /* Info.plist */,
+				D301F7F526064DDB0036DCCF /* AppDelegate.swift */,
+				D301F7F726064DDB0036DCCF /* SceneDelegate.swift */,
+			);
+			path = SupportingFile;
+			sourceTree = "<group>";
+		};
+		D3A27C9E2608CCE40065D4CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A27C912607F8A00065D4CE /* JsonFile */,
+				D301F7FE26064DDD0036DCCF /* Assets.xcassets */,
+				D301F7FB26064DDB0036DCCF /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

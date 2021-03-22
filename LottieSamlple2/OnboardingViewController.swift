@@ -46,7 +46,7 @@ class OnboardingViewController: UIViewController {
 extension OnboardingViewController: UICollectionViewDelegate {
 }
 
-extension OnboardingViewController:UICollectionViewDelegateFlowLayout{
+extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = collectionView.bounds.width
         let itemHeight = collectionView.bounds.height
@@ -59,7 +59,7 @@ extension OnboardingViewController:UICollectionViewDelegateFlowLayout{
 
 extension OnboardingViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
