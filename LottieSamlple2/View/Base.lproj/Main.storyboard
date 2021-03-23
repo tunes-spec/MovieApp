@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-kb-xXG">
-                                <rect key="frame" x="294.5" y="60" width="103.5" height="27.5"/>
+                                <rect key="frame" x="307.5" y="68" width="103.5" height="27.5"/>
                                 <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
@@ -126,10 +126,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jSP-kb-xXG" secondAttribute="trailing" constant="16" id="6fC-4t-85x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jSP-kb-xXG" secondAttribute="trailing" constant="3" id="6fC-4t-85x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CLh-HJ-onZ" secondAttribute="trailing" id="Flq-gC-rER"/>
                             <constraint firstItem="CLh-HJ-onZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oy7-Me-l4T"/>
-                            <constraint firstItem="jSP-kb-xXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="WpS-x7-3TB"/>
+                            <constraint firstItem="jSP-kb-xXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="WpS-x7-3TB"/>
                             <constraint firstItem="CLh-HJ-onZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YVk-5g-tro"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CLh-HJ-onZ" secondAttribute="bottom" id="dCV-kR-cPY"/>
                         </constraints>
