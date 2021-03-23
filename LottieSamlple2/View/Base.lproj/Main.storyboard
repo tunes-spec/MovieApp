@@ -57,14 +57,14 @@
                                                 <rect key="frame" x="207" y="0.0" width="207" height="40"/>
                                                 <subviews>
                                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-Ku-6Ug">
-                                                        <rect key="frame" x="83.5" y="7" width="122.5" height="27.5"/>
+                                                        <rect key="frame" x="114.5" y="7" width="122.5" height="27.5"/>
                                                         <color key="pageIndicatorTintColor" systemColor="linkColor"/>
                                                         <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor"/>
                                                     </pageControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="Vvd-Ku-6Ug" secondAttribute="trailing" constant="1" id="GAN-25-r6U"/>
+                                                    <constraint firstAttribute="right" secondItem="Vvd-Ku-6Ug" secondAttribute="right" constant="-30" id="GAN-25-r6U"/>
                                                     <constraint firstItem="Vvd-Ku-6Ug" firstAttribute="top" secondItem="wOG-wK-3aE" secondAttribute="top" constant="7" id="poZ-Fe-Mnj"/>
                                                 </constraints>
                                             </view>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-749.33035714285711" y="-30.434782608695656"/>
+            <point key="canvasLocation" x="-794" y="-177"/>
         </scene>
         <!--Main App View Controller-->
         <scene sceneID="lDn-9S-z2L">
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHt-Kg-lu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.579710144927539" y="-29.464285714285712"/>
+            <point key="canvasLocation" x="-23" y="-177"/>
         </scene>
     </scenes>
     <designables>

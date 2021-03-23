@@ -30,10 +30,10 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         setupCollectionView()
         setupPageControl()
-      
+        
     }
     
     private func setupPageControl() {
@@ -59,6 +59,7 @@ class OnboardingViewController: UIViewController {
             let nextIndex = indexpath.item + 1
             let nextIndexPath = IndexPath(item: nextIndex , section: 0)
             collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
+            pageControl.currentPage = nextIndex
         }
     }
     
@@ -75,6 +76,13 @@ class OnboardingViewController: UIViewController {
                               completion: nil)
         }
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
+        pageControl.currentPage = index
+    }
+    
+    
 }
 
 extension OnboardingViewController: UICollectionViewDelegate {
