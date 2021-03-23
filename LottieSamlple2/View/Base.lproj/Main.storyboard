@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Trh-he-Dz1">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CDa-yQ-S3p">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
@@ -36,46 +36,46 @@
                                             <constraint firstAttribute="height" constant="20" id="HwX-ky-Njc"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-r5-1sv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-r5-1sv">
                                         <rect key="frame" x="0.0" y="20" width="414" height="40"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wz4-sc-XVq">
-                                                <rect key="frame" x="0.0" y="0.0" width="14.5" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOj-zx-DGi">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-q4-8ZP">
+                                                        <rect key="frame" x="15" y="5" width="108" height="30"/>
+                                                        <state key="normal" title="ログイン画面へ"/>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="wz4-sc-XVq" secondAttribute="height" multiplier="1:2.8" id="Xzj-S3-LGQ"/>
+                                                    <constraint firstItem="QKq-q4-8ZP" firstAttribute="leading" secondItem="vOj-zx-DGi" secondAttribute="leading" constant="15" id="mWm-ko-R5K"/>
+                                                    <constraint firstItem="QKq-q4-8ZP" firstAttribute="top" secondItem="vOj-zx-DGi" secondAttribute="top" constant="5" id="mZt-ca-gna"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKq-q4-8ZP">
-                                                <rect key="frame" x="14.5" y="0.0" width="120" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="QKq-q4-8ZP" secondAttribute="height" multiplier="3:1" id="OA9-fx-bhv"/>
-                                                </constraints>
-                                                <state key="normal" title="ログイン画面へ"/>
-                                            </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-Wc-8ID">
-                                                <rect key="frame" x="134.5" y="0.0" width="132" height="40"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOG-wK-3aE">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                                <subviews>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-Ku-6Ug">
+                                                        <rect key="frame" x="83.5" y="7" width="122.5" height="27.5"/>
+                                                        <color key="pageIndicatorTintColor" systemColor="linkColor"/>
+                                                        <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor"/>
+                                                    </pageControl>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="eaX-Wc-8ID" secondAttribute="height" multiplier="3.3:1" id="hzs-nJ-y3e"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Vvd-Ku-6Ug" secondAttribute="trailing" constant="1" id="GAN-25-r6U"/>
+                                                    <constraint firstItem="Vvd-Ku-6Ug" firstAttribute="top" secondItem="wOG-wK-3aE" secondAttribute="top" constant="7" id="poZ-Fe-Mnj"/>
                                                 </constraints>
                                             </view>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vvd-Ku-6Ug">
-                                                <rect key="frame" x="266.5" y="0.0" width="147.5" height="40"/>
-                                                <color key="pageIndicatorTintColor" systemColor="linkColor"/>
-                                                <color key="currentPageIndicatorTintColor" systemColor="systemPinkColor"/>
-                                            </pageControl>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8SA-lJ-D5y"/>
                                         </constraints>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-HJ-onZ">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="792"/>
+                                        <rect key="frame" x="0.0" y="60" width="414" height="758"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="pTZ-fd-5Vs"/>
-                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8RA-hy-h4o">
                                             <size key="itemSize" width="403" height="829"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -179,10 +179,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Trh-he-Dz1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8dW-6v-k1I"/>
-                            <constraint firstItem="Trh-he-Dz1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U6p-dL-hDB"/>
-                            <constraint firstAttribute="bottom" secondItem="Trh-he-Dz1" secondAttribute="bottom" id="ciq-XZ-Usa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Trh-he-Dz1" secondAttribute="trailing" id="kqL-34-LZj"/>
+                            <constraint firstItem="Trh-he-Dz1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HpL-hh-rBt"/>
+                            <constraint firstItem="Trh-he-Dz1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NdS-DE-z2c"/>
+                            <constraint firstItem="Trh-he-Dz1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hgD-Gg-pDn"/>
+                            <constraint firstItem="Trh-he-Dz1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jhn-qR-INe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -192,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-749.27536231884062" y="-29.464285714285712"/>
+            <point key="canvasLocation" x="-749.33035714285711" y="-30.434782608695656"/>
         </scene>
         <!--Main App View Controller-->
         <scene sceneID="lDn-9S-z2L">
@@ -241,6 +241,9 @@
             <point key="canvasLocation" x="40.579710144927539" y="-29.464285714285712"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8cD-xC-55p"/>
+    </designables>
     <resources>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
