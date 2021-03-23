@@ -24,12 +24,22 @@ struct Slide {
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView:UICollectionView!
+    @IBOutlet weak var pageControl:UIPageControl!
     
     private let slides: [Slide] = Slide.collection
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setupCollectionView()
+        setupPageControl()
+      
+    }
+    
+    private func setupPageControl() {
+        pageControl.numberOfPages = slides.count
+        let angle = CGFloat.pi/2
+        pageControl.transform = CGAffineTransform(rotationAngle: angle)
     }
     
     private func setupCollectionView() {
