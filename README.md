@@ -4,3 +4,6 @@
 <img width="300" alt="1のコピー.gif" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1215670/138851b8-f836-b0b5-d65f-c313f687d8a4.gif"/> 
 
 ***
+
+観た映画を記録して保存してくれるアプリです。
+lottie-iosが好きなので、イントロ画面に取り入れてみました！
