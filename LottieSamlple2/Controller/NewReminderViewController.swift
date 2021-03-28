@@ -1,9 +1,3 @@
-//
-//  NewReminderViewController.swift
-//  Reminder
-//
-//  Created by TSUNE on 2021/03/27.
-//
 
 import UIKit
 
@@ -15,7 +9,6 @@ class NewReminderViewController: UIViewController {
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var compleatedSwitch: UISwitch!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +19,7 @@ class NewReminderViewController: UIViewController {
             compleatedSwitch.isOn = reminder.isCompleated
         }
     }
+    
     @IBAction func saveButtonDidTapped(_ sender: UIButton) {
         let reminder = Reminder(title: titleTextField.text!, date: datePicker.date, isCompleated: compleatedSwitch.isOn)
         navigationController?.popViewController(animated: true)

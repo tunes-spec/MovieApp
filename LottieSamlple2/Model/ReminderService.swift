@@ -1,9 +1,3 @@
-//
-//  ReminderService.swift
-//  Reminder
-//
-//  Created by TSUNE on 2021/03/23.
-//
 
 import Foundation
 
@@ -17,7 +11,6 @@ class ReminderService {
         url.appendPathComponent("reminder json!")
         load()
     }
-    
     
     func load() {
         do {
@@ -39,7 +32,6 @@ class ReminderService {
         }
     }
     
-    //Create
     func create(reminder:Reminder) {
         //Add reminder to reminders array in a sorted order
         var inderxToInsert: Int?
@@ -57,30 +49,29 @@ class ReminderService {
         }
         save()
     }
-    //Update
+    
     func update(reminder:Reminder,index:Int) {
         reminders[index] = reminder
         save()
     }
-    //Get of reminders
+    
     func getCount() -> Int {
         return reminders.count
     }
-    //Get specific reminder
+    
     func getReminder(index:Int) -> Reminder {
         return reminders[index]
     }
     
-    //Get the list of a reminder
     func getReminders() -> [Reminder] {
         return reminders
     }
-    //Delete a reminder
+    
     func delete(index:Int) {
         reminders.remove(at: index)
         save()
     }
-    //Get the favoriteReminder
+    
     func getFavoritedReminder() -> Reminder? {
         return reminders.first
     }

@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  LottieSamlple2
-//
-//  Created by TSUNE on 2021/03/21.
-//
 
 import UIKit
 import Lottie
@@ -15,8 +9,8 @@ struct Slide {
     let buttonTitle: String
     
     static let collection: [Slide] = [
-        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "review", buttonColor: .systemGreen, buttonTitle: "記録する"),
-        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "movie", buttonColor: .systemYellow, buttonTitle: "探す")
+        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "review", buttonColor: .systemGreen, buttonTitle: "次へ"),
+        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "movie", buttonColor: .systemYellow, buttonTitle: "記録する")
     ]
 }
 
@@ -32,7 +26,6 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         setupCollectionView()
         setupPageControl()
-        
     }
     
     private func setupPageControl() {
@@ -80,8 +73,6 @@ class OnboardingViewController: UIViewController {
         let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
         pageControl.currentPage = index
     }
-    
-    
 }
 
 extension OnboardingViewController: UICollectionViewDelegate {
@@ -138,6 +129,5 @@ class OnboardingViewControllerCell: UICollectionViewCell {
     @IBAction func actionButtonTapped() {
         actionButtonDidTap?()
     }
-    
 }
 

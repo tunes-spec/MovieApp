@@ -1,9 +1,3 @@
-//
-//  ReminderViewController.swift
-//  Reminder
-//
-//  Created by TSUNE on 2021/03/26.
-//
 
 import UIKit
 
@@ -13,8 +7,8 @@ class ReminderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()

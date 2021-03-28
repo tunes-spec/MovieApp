@@ -1,9 +1,3 @@
-//
-//  ReminderViewCell.swift
-//  Reminder
-//
-//  Created by TSUNE on 2021/03/26.
-//
 
 import UIKit
 
@@ -13,15 +7,13 @@ class ReminderViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func update(reminder: Reminder,index: Int ) {

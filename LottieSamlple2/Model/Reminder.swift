@@ -1,9 +1,3 @@
-//
-//  Reminder.swift
-//  Reminder
-//
-//  Created by TSUNE on 2021/03/23.
-//
 
 import Foundation
 
@@ -17,6 +11,5 @@ class Reminder: Codable {
         self.date = date
         self.isCompleated = isCompleated
     }
-    
 }
-  
+

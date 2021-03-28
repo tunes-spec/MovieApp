@@ -77,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				D301F7F426064DDB0036DCCF /* LottieSamlple2 */,
+				D3A27C9D2608CCCB0065D4CE /* SupportingFile */,
 				D301F7F326064DDB0036DCCF /* Products */,
 				67B6536550C97BC03C78110C /* Pods */,
 				CFF3BA6E774291837F182D2B /* Frameworks */,
@@ -94,10 +95,9 @@
 		D301F7F426064DDB0036DCCF /* LottieSamlple2 */ = {
 			isa = PBXGroup;
 			children = (
+				D301F80326064DDD0036DCCF /* Info.plist */,
 				D3EA901226104108009E9A33 /* Model */,
 				D3A27C9E2608CCE40065D4CE /* View */,
-				D301F80326064DDD0036DCCF /* Info.plist */,
-				D3A27C9D2608CCCB0065D4CE /* SupportingFile */,
 				D3EA901026103FF3009E9A33 /* Controller */,
 			);
 			path = LottieSamlple2;
@@ -128,7 +128,6 @@
 				D3A27C912607F8A00065D4CE /* JsonFile */,
 				D301F7FE26064DDD0036DCCF /* Assets.xcassets */,
 				D301F7FB26064DDB0036DCCF /* Main.storyboard */,
-				D3EA900926103FD2009E9A33 /* ReminderViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				D301F7F926064DDB0036DCCF /* OnboardingViewController.swift */,
+				D3EA900926103FD2009E9A33 /* ReminderViewController.swift */,
 				D3EA90182610413C009E9A33 /* ReminderViewCell.swift */,
 				D3EA900C26103FE1009E9A33 /* NewReminderViewController.swift */,
 			);
