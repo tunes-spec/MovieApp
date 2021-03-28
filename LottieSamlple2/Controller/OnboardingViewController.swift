@@ -30,7 +30,6 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCollectionView()
         setupPageControl()
         
@@ -64,7 +63,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func showMainApp() {
-        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MianApp")
+        let mainAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "Main")
         if let windoewScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let sceneDelegate = windoewScene.delegate as? SceneDelegate,
            let window = sceneDelegate.window {

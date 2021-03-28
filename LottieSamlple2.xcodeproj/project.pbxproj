@@ -14,9 +14,13 @@
 		D301F7FD26064DDB0036DCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D301F7FB26064DDB0036DCCF /* Main.storyboard */; };
 		D301F7FF26064DDD0036DCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D301F7FE26064DDD0036DCCF /* Assets.xcassets */; };
 		D301F80226064DDD0036DCCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D301F80026064DDD0036DCCF /* LaunchScreen.storyboard */; };
-		D341B1EF26094E6C009C12AA /* MainAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D341B1EE26094E6C009C12AA /* MainAppViewController.swift */; };
 		D3A27C952607F8AE0065D4CE /* review.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A27C932607F8AE0065D4CE /* review.json */; };
 		D3A27C992608CB230065D4CE /* movie.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A27C982608CB230065D4CE /* movie.json */; };
+		D3EA900A26103FD2009E9A33 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EA900926103FD2009E9A33 /* ReminderViewController.swift */; };
+		D3EA900D26103FE1009E9A33 /* NewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EA900C26103FE1009E9A33 /* NewReminderViewController.swift */; };
+		D3EA901526104108009E9A33 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EA901326104108009E9A33 /* Reminder.swift */; };
+		D3EA901626104108009E9A33 /* ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EA901426104108009E9A33 /* ReminderService.swift */; };
+		D3EA90192610413C009E9A33 /* ReminderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EA90182610413C009E9A33 /* ReminderViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +35,13 @@
 		D301F7FE26064DDD0036DCCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D301F80126064DDD0036DCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D301F80326064DDD0036DCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D341B1EE26094E6C009C12AA /* MainAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewController.swift; sourceTree = "<group>"; };
 		D3A27C932607F8AE0065D4CE /* review.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = review.json; sourceTree = "<group>"; };
 		D3A27C982608CB230065D4CE /* movie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movie.json; sourceTree = "<group>"; };
+		D3EA900926103FD2009E9A33 /* ReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		D3EA900C26103FE1009E9A33 /* NewReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReminderViewController.swift; sourceTree = "<group>"; };
+		D3EA901326104108009E9A33 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		D3EA901426104108009E9A33 /* ReminderService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderService.swift; sourceTree = "<group>"; };
+		D3EA90182610413C009E9A33 /* ReminderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +94,11 @@
 		D301F7F426064DDB0036DCCF /* LottieSamlple2 */ = {
 			isa = PBXGroup;
 			children = (
+				D3EA901226104108009E9A33 /* Model */,
 				D3A27C9E2608CCE40065D4CE /* View */,
-				D3A27C9D2608CCCB0065D4CE /* SupportingFile */,
-				D301F7F926064DDB0036DCCF /* OnboardingViewController.swift */,
 				D301F80326064DDD0036DCCF /* Info.plist */,
-				D341B1EE26094E6C009C12AA /* MainAppViewController.swift */,
+				D3A27C9D2608CCCB0065D4CE /* SupportingFile */,
+				D3EA901026103FF3009E9A33 /* Controller */,
 			);
 			path = LottieSamlple2;
 			sourceTree = "<group>";
@@ -120,8 +128,28 @@
 				D3A27C912607F8A00065D4CE /* JsonFile */,
 				D301F7FE26064DDD0036DCCF /* Assets.xcassets */,
 				D301F7FB26064DDB0036DCCF /* Main.storyboard */,
+				D3EA900926103FD2009E9A33 /* ReminderViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D3EA901026103FF3009E9A33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D301F7F926064DDB0036DCCF /* OnboardingViewController.swift */,
+				D3EA90182610413C009E9A33 /* ReminderViewCell.swift */,
+				D3EA900C26103FE1009E9A33 /* NewReminderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3EA901226104108009E9A33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3EA901326104108009E9A33 /* Reminder.swift */,
+				D3EA901426104108009E9A33 /* ReminderService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EA901626104108009E9A33 /* ReminderService.swift in Sources */,
 				D301F7FA26064DDB0036DCCF /* OnboardingViewController.swift in Sources */,
+				D3EA90192610413C009E9A33 /* ReminderViewCell.swift in Sources */,
+				D3EA900D26103FE1009E9A33 /* NewReminderViewController.swift in Sources */,
 				D301F7F626064DDB0036DCCF /* AppDelegate.swift in Sources */,
+				D3EA901526104108009E9A33 /* Reminder.swift in Sources */,
+				D3EA900A26103FD2009E9A33 /* ReminderViewController.swift in Sources */,
 				D301F7F826064DDB0036DCCF /* SceneDelegate.swift in Sources */,
-				D341B1EF26094E6C009C12AA /* MainAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
