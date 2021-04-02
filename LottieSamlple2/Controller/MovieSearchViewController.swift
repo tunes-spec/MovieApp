@@ -31,7 +31,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate, UITableV
             return
         }
         
-        let query = text.replacingOccurrences(of: " ", with: "%20")
+        let query = field.text!
         
         movies.removeAll()
         
@@ -66,6 +66,24 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate, UITableV
                                     
                                    }).resume()
         
+    }
+    
+    @IBAction func homeButtonDidTapped(_ sender: UIBarButtonItem) {
+        showHomeApp()
+    }
+    
+    private func showHomeApp() {
+        let introAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "intro")
+        if let windoewScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windoewScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = introAppViewController
+            UIView.transition(with: window,
+                              duration: 0.25,
+                              options: .transitionCurlUp,
+                              animations: nil,
+                              completion: nil)
+        }
     }
     
     // Table

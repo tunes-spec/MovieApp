@@ -515,7 +515,13 @@
                             <constraint firstItem="l5C-vV-Czg" firstAttribute="leading" secondItem="OOj-TM-sUb" secondAttribute="leading" constant="10" id="ekH-ad-PbF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="映画を探す" id="voW-VE-88z"/>
+                    <navigationItem key="navigationItem" title="映画を探す" id="voW-VE-88z">
+                        <barButtonItem key="leftBarButtonItem" title="ホーム" id="hZi-cH-q1o">
+                            <connections>
+                                <action selector="homeButtonDidTapped:" destination="818-tS-VzK" id="gNo-ur-eSc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="field" destination="CNl-B8-VJ7" id="vy1-yE-0yB"/>
                         <outlet property="table" destination="l5C-vV-Czg" id="9sq-Y2-x7K"/>
