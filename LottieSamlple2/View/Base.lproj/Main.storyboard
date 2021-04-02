@@ -482,6 +482,67 @@
             </objects>
             <point key="canvasLocation" x="-48" y="-177"/>
         </scene>
+        <!--映画を探す-->
+        <scene sceneID="DgZ-47-hmb">
+            <objects>
+                <viewController id="818-tS-VzK" customClass="MovieSearchViewController" customModule="LottieSamlple2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A94-Ic-LDT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入れる" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNl-B8-VJ7">
+                                <rect key="frame" x="20" y="98" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="SHE-iB-mpt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l5C-vV-Czg">
+                                <rect key="frame" x="10" y="160" width="394" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OOj-TM-sUb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OOj-TM-sUb" firstAttribute="bottom" secondItem="l5C-vV-Czg" secondAttribute="bottom" constant="10" id="X97-v6-CEZ"/>
+                            <constraint firstItem="CNl-B8-VJ7" firstAttribute="top" secondItem="OOj-TM-sUb" secondAttribute="top" constant="10" id="Xz0-S8-Dwj"/>
+                            <constraint firstItem="CNl-B8-VJ7" firstAttribute="leading" secondItem="OOj-TM-sUb" secondAttribute="leading" constant="20" id="afW-ff-Lgg"/>
+                            <constraint firstItem="OOj-TM-sUb" firstAttribute="trailing" secondItem="CNl-B8-VJ7" secondAttribute="trailing" constant="20" id="czt-yk-I9T"/>
+                            <constraint firstItem="l5C-vV-Czg" firstAttribute="top" secondItem="CNl-B8-VJ7" secondAttribute="bottom" constant="10" id="da7-Mu-klE"/>
+                            <constraint firstItem="OOj-TM-sUb" firstAttribute="trailing" secondItem="l5C-vV-Czg" secondAttribute="trailing" constant="10" id="eAx-as-cTG"/>
+                            <constraint firstItem="l5C-vV-Czg" firstAttribute="leading" secondItem="OOj-TM-sUb" secondAttribute="leading" constant="10" id="ekH-ad-PbF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="映画を探す" id="voW-VE-88z"/>
+                    <connections>
+                        <outlet property="field" destination="CNl-B8-VJ7" id="vy1-yE-0yB"/>
+                        <outlet property="table" destination="l5C-vV-Czg" id="9sq-Y2-x7K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPn-u2-9MH" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="526"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Byo-Of-TC3">
+            <objects>
+                <navigationController storyboardIdentifier="Search" automaticallyAdjustsScrollViewInsets="NO" id="4la-nn-efi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QOp-rR-TkK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="818-tS-VzK" kind="relationship" relationship="rootViewController" id="ixT-UH-syp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNW-ae-YpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682.60869565217399" y="525.66964285714289"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="8cD-xC-55p"/>

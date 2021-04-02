@@ -9,8 +9,8 @@ struct Slide {
     let buttonTitle: String
     
     static let collection: [Slide] = [
-        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "review", buttonColor: .systemGreen, buttonTitle: "次へ"),
-        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "movie", buttonColor: .systemYellow, buttonTitle: "記録する")
+        .init(title: "見たい映画がない時に！映画によるストレス発散は学術的にも証明されています", animationName: "movie", buttonColor: .systemGreen, buttonTitle: "探す"),
+        .init(title: "映画の感想は専用のアプリにまとめておくと、時間が経った時に読み返す楽しみが味わえます", animationName: "review", buttonColor: .systemYellow, buttonTitle: "記録する")
     ]
 }
 
@@ -48,10 +48,7 @@ class OnboardingViewController: UIViewController {
         if indexpath.item == slides.count - 1 {
             showMainApp()
         } else {
-            let nextIndex = indexpath.item + 1
-            let nextIndexPath = IndexPath(item: nextIndex , section: 0)
-            collectionView.scrollToItem(at: nextIndexPath, at: .top, animated: true)
-            pageControl.currentPage = nextIndex
+            showSeachApp()
         }
     }
     
@@ -68,6 +65,22 @@ class OnboardingViewController: UIViewController {
                               completion: nil)
         }
     }
+    
+    private func showSeachApp() {
+        let searchMovieAppViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "Search")
+        if let windoewScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windoewScene.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = searchMovieAppViewController
+            UIView.transition(with: window,
+                              duration: 0.25,
+                              options: .transitionCurlUp,
+                              animations: nil,
+                              completion: nil)
+        }
+    }
+    
+    
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let index = Int(collectionView.contentOffset.y / scrollView.frame.size.height)
